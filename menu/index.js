@@ -9,7 +9,9 @@ app.use(express.json());
 app.use(express.static('public'))
 
 app.get('/healthz', function (req, res) {
-  res.sendStatus(200);
+  res.status(200).json({
+    status: 'success',
+  });
 })
 
 app.post('/order', function (req, res) {
