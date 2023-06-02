@@ -11,6 +11,7 @@ app.use(express.static('public'))
 app.get('/healthz', function (req, res) {
   res.status(200).json({
     status: 'success',
+    message: 'hi from okteto'
   });
 })
 
